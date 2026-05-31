@@ -14,7 +14,7 @@ from app.routes.predict import load_models
 
 router = APIRouter()
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_PATH = BASE_DIR / "data" / "dpwh_flood_control_projects.csv"
 
 # Columns that MUST exist in the uploaded CSV for retraining to proceed.

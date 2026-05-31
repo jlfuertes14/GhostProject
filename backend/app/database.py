@@ -2,10 +2,10 @@ import duckdb
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 CSV_PATH = DATA_DIR / "dpwh_flood_control_projects.csv"
-DB_PATH = BASE_DIR / "backend" / "flood_projects.duckdb"
+DB_PATH = BASE_DIR / "flood_projects.duckdb"
 
 def get_db_connection():
     """Returns a DuckDB connection."""

@@ -18,7 +18,7 @@ from app.models.schemas import (
 
 router = APIRouter()
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 ARTIFACTS_DIR = BASE_DIR / "model_artifacts"
 
 encoder = None
