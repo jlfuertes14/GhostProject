@@ -158,7 +158,8 @@ async def predict_combined(payload: dict):
         except Exception:
             pred_budget = float(budget) * 1.1
 
-    delay_days = delay_prob * 100 # Rough conversion for demo
+    target_duration = float(payload.get("target_duration", 120))
+    delay_days = delay_prob * target_duration # Scale delay by the project's target duration
     
     return {
         "delay_days": delay_days,
