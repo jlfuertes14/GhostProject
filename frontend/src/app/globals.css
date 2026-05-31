@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f1f5f9;
+  --foreground: #0f172a;
+  --primary: #0047AB;
+  --primary-hover: #0035c4;
+  --danger: #CE1126;
+  --warning: #FCD116;
+  --sidebar-bg: #1e293b;
+  --sidebar-fg: #f8fafc;
+  --ease-custom: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-fg: var(--sidebar-fg);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Animations (emil-design-eng) */
+.pressable {
+  transition: transform 150ms var(--ease-custom), background-color 150ms var(--ease-custom);
+}
+.pressable:active {
+  transform: scale(0.97);
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.stagger-enter {
+  opacity: 0;
+  animation: staggerFadeIn 400ms var(--ease-custom) forwards;
+}
+.stagger-delay-1 { animation-delay: 50ms; }
+.stagger-delay-2 { animation-delay: 100ms; }
+.stagger-delay-3 { animation-delay: 150ms; }
+.stagger-delay-4 { animation-delay: 200ms; }

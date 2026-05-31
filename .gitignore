@@ -1,0 +1,53 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.env
+
+# ========================
+# Node.js / Next.js
+# ========================
+node_modules/
+.next/
+out/
+.vercel
+
+# ========================
+# Model artifacts (large files)
+# ========================
+model_artifacts/*.pkl
+model_artifacts/*.joblib
+
+# ========================
+# Data (keep structure, ignore large CSVs in git)
+# ========================
+# Uncomment below if CSV is too large for git:
+# data/*.csv
+
+# ========================
+# IDE & OS
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ========================
+# Jupyter
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# Docker
+# ========================
+*.log
