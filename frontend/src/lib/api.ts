@@ -1,4 +1,8 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
+let baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
+if (baseUrl && !baseUrl.endsWith('/api')) {
+  baseUrl = baseUrl.replace(/\/+$/, '') + '/api';
+}
+const API_BASE_URL = baseUrl;
 
 export interface Project {
   project_id: string;
