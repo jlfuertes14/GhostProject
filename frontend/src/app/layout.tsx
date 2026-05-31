@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "GHOST PROJECT | Watchdog Platform",
+  title: "GHOST PROJECT | Watchdog Platform and Infrastructure Prediction",
   description: "Tracking DPWH Infrastructure Anomalies",
 };
 
