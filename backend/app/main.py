@@ -34,7 +34,7 @@ import os
 # CORS — allow the Vercel-hosted frontend to call this API
 # ---------------------------------------------------------------------------
 # Parse ALLOWED_ORIGINS from environment, or use defaults
-allowed_origins_env = os.environ.get("ALLOWED_ORIGINS", "http://localhost:3000,https://*.vercel.app")
+allowed_origins_env = os.environ.get("ALLOWED_ORIGINS", "http://localhost:3000,https://ghost-project-one-dun.vercel.app")
 allow_origins = [origin.strip() for origin in allowed_origins_env.split(",") if origin.strip()]
 
 app.add_middleware(
